@@ -134,4 +134,8 @@ section a.caixa:hover .mais {
     section a.caixa:nth-child(2n +2) {
      right: 20px;   
     }
+    main h1{
+        font-size: 3em;
+        line-height: 60px;
+    }
 }
