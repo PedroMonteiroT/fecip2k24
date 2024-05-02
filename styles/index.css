@@ -6,9 +6,11 @@
 body{
     background-image: url(../img/backgroundindex.jpeg);
     background-size: cover;
+    background-repeat: no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: rgb(0, 113, 117);
 }
 
 
