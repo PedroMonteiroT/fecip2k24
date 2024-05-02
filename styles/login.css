@@ -1,0 +1,105 @@
+body{
+    background-color: #A0E0DF;
+    display: flex;
+}
+
+
+
+main{
+    padding: 50px 20px 40px 50px;
+    width: 80%;
+}
+h1{
+    color: white;
+    font-size: 4em;
+    font-weight: 400;
+}
+
+p{
+    font-size: 1.5em;
+    margin: 100px 0;
+}
+
+
+div.login{
+    border: 2px dashed var(--cinzaescuro);
+    border-radius: 10px;
+    width: 70%;
+    position: relative;
+    padding: 12px;
+}
+
+div.login label span{
+    font-size: 70px;
+}
+input[type=text], input[type= password]{
+    width: 360px;
+    height: 60px;
+    border-radius: 20px;
+    border: none;
+    position: relative;
+    top: -23px;
+    outline: none;
+    padding-left: 20px;
+}
+input[type=text]::placeholder, input[type= password]::placeholder{
+    opacity: 80%;
+    color: var(--cinzaescuro);
+}
+
+p, span{
+    color: var(--cinzaescuro);
+}
+input[type=submit]{
+    background-color: var(--cinzaescuro);
+    position: relative;
+    top: 10px;
+    right: 20px;
+    float: right;
+    width: 200px;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    height: 60px;
+    cursor: pointer;
+    transition: all .7s;
+}
+input[type=submit]:hover{
+    background-color: #444444;
+}
+
+
+
+#img{
+    position: absolute;
+    right: 0;
+    height: 100%;
+}
+#img img{
+    height: 99.6%;
+}
+
+@media(max-width: 1315px){
+    #img{
+        display: none;
+    }
+    div.login{
+        border: none;
+    }
+}
+@media(max-width: 905px){
+    div.texto h1, div.logo img{
+        text-align: center;
+    }
+
+    .login label{
+        display: none;
+    }
+    input[type=text]{
+        margin-bottom: 15px;
+    }
+    main p{
+        width: 100%;
+    }
+}
+    

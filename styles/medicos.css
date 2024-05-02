@@ -1,0 +1,137 @@
+body {
+    background-color: var(--cianoclaro);
+    background-size: cover;
+    overflow: auto;
+}
+
+header {
+    display: flex;
+}
+
+header h1 {
+    margin: 18px 0 0 18px;
+    color: var(--cinzaescuro);
+    font-weight: 400;
+    font-size: 2.2em;
+}
+
+main {
+    padding: 25px;
+}
+
+main h1 {
+    text-align: center;
+    font-size: 4.5em;
+    color: var(--cinzaescuro);
+    font-weight: 400;
+    margin-bottom: 150px;
+}
+main h1 span {
+    position: relative;
+    top: 23px;
+    font-size: 1.3em !important;
+    color: darkgreen;
+
+}
+
+
+section {
+    display: grid;
+    column-gap: 100px;
+    row-gap: 130px;
+    grid-template-columns: repeat(3, 280px);
+    justify-content: center;
+    width: 100%;
+}
+
+
+section a.caixa {
+    position: relative;
+    background-color: white;
+    width: 300px;
+    height: 350px;
+    border-radius: 20px;
+    padding: 30px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    gap: 0px;
+    text-align: center;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.416);
+    cursor: pointer;
+    transition: all .7s;
+    text-decoration: none;
+    color: black; 
+}
+
+section a.caixa:hover{
+    background-color: rgb(224, 224, 224);
+}
+
+section a.caixa .foto{
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background-color:var(--cianoclaro);
+    border: 15px solid white;
+    margin: auto;
+    margin-top: -130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .7s;
+}
+section a.caixa:hover .foto{
+    border-color: rgb(224, 224, 224);
+}
+
+
+section a.caixa span {
+    color: var(--cianoescuro);
+    font-size: 70px;
+    height: fit-content;
+}
+
+section a.caixa h3{
+    font-size: 1.8em;
+}
+
+section a.caixa p.info{
+    font-weight: 600;
+    color: var(--cinzaescuro);
+    height: fit-content ;
+    font-size: 1.3em;
+    margin-bottom: 10px;
+}
+
+section a.caixa p {
+    font-weight: 400;
+    font-size: 1.1em;
+    overflow: hidden;
+    height: 120px;
+    margin: 20px 0 -20px;
+}
+section a.caixa .mais {
+    transition: transform 0.3s ease;
+}
+
+section a.caixa:hover .mais {
+    transform: rotate(90deg);
+}
+
+@media(max-width: 1200px){
+    section{
+        grid-template-columns: repeat(2, 280px);
+    }
+    section a.caixa:nth-child(3n+2) {
+        top: 0px;
+    }
+}
+@media(max-width: 770px){
+    section{
+        grid-template-columns: repeat(1, 280px);
+    }
+    section a.caixa:nth-child(2n +2) {
+     right: 20px;   
+    }
+}

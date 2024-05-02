@@ -1,0 +1,96 @@
+body {
+    background-image: url(../img/gerenciasbg.png);
+    background-size: cover;
+}
+
+header {
+    display: flex;
+}
+
+header h1 {
+    margin: 18px 0 0 18px;
+    color: var(--cinzaclaro);
+    font-weight: 400;
+    font-size: 2.2em;
+}
+
+main {
+    padding: 25px;
+}
+
+main h2 {
+    text-align: center;
+    font-size: 2em;
+}
+
+section {
+    display: grid;
+    column-gap: 100px;
+    row-gap: 20px;
+    grid-template-columns: repeat(3, 280px);
+    justify-content: center;
+    margin: 30px 0 0 0;
+    width: 100%;
+}
+
+section a.caixa {
+    position: relative;
+    background-color: white;
+    width: 250px;
+    height: 280px;
+    border-radius: 20px;
+    padding: 30px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.416);
+    cursor: pointer;
+    transition: all .7s;
+    text-decoration: none;
+    color: black; 
+}
+
+section a.caixa:hover {
+    background-color: rgb(224, 224, 224);
+}
+
+section a.caixa:nth-child(3n+2) {
+    position: relative;
+    top: 40px;
+}
+
+section a.caixa span {
+    color: var(--cianoescuro);
+    font-size: 70px;
+}
+
+section a.caixa p {
+    font-weight: 700;
+    font-size: 1.2em;
+}
+section a.caixa .mais {
+    transition: transform 0.3s ease;
+}
+
+section a.caixa:hover .mais {
+    transform: rotate(90deg);
+}
+
+@media(max-width: 1100px){
+    section{
+        grid-template-columns: repeat(2, 280px);
+    }
+    section a.caixa:nth-child(3n+2) {
+        top: 0px;
+    }
+}
+@media(max-width: 770px){
+    section{
+        grid-template-columns: repeat(1, 280px);
+    }
+    section a.caixa:nth-child(2n +2) {
+     right: 20px;   
+    }
+}
