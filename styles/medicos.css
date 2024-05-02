@@ -128,6 +128,10 @@ section a.caixa:hover .mais {
     }
 }
 @media(max-width: 770px){
+    header h1{
+        font-size: 1.9em;
+    }
+    
     section{
         grid-template-columns: repeat(1, 280px);
     }
@@ -135,7 +139,7 @@ section a.caixa:hover .mais {
      right: 20px;   
     }
     main h1{
-        font-size: 3em;
+        font-size: 2.5em;   
         line-height: 60px;
     }
 }
