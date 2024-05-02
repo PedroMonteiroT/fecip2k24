@@ -96,13 +96,18 @@ input[type=submit]:hover{
     .login label{
         display: none;
     }
-    input[type=text]{
-        margin-bottom: 15px;
-    }
     input[type=text], input[type=password]{
-        margin-bottom: 15px;
-        width: 290px;
+        width: 250px;
     }
+    
+    .login{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+        justify-content: center;
+    }
+
     main p{
         width: 100%;
     }
