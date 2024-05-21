@@ -9,11 +9,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Questrial";
+    font-family: "Questrial"; 
+    scrollbar-width: auto;
+    scrollbar-color: var(--cianoclaro) var(--cianoescuro); 
 }
 body{
     width: 100%;
-    height: 96vh;
+    height: 100vh;
 }
 
 div.logo img{
@@ -29,3 +31,4 @@ div.logo img{
         height: 94vh;
     }
 }
+

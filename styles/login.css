@@ -1,71 +1,13 @@
 body{
     background-color: #A0E0DF;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    max-height: 100%;
+    background-image: linear-gradient(120deg, #85e1e0, #67e0de, #3ddbd8, #00e0dc);
 }
-
-
-
-main{
-    padding: 50px 20px 40px 50px;
-    width: 80%;
-}
-h1{
-    color: white;
-    font-size: 4em;
-    font-weight: 400;
-}
-
-p{
-    font-size: 1.5em;
-    margin: 100px 0;
-}
-
-
-div.login{
-    border: 2px dashed var(--cinzaescuro);
-    border-radius: 10px;
-    width: 70%;
-    position: relative;
-    padding: 12px;
-}
-
-div.login label span{
-    font-size: 70px;
-}
-input[type=text], input[type= password]{
-    width: 360px;
-    height: 60px;
-    border-radius: 20px;
-    border: none;
-    position: relative;
-    top: -23px;
-    outline: none;
-    padding-left: 20px;
-}
-input[type=text]::placeholder, input[type= password]::placeholder{
-    opacity: 80%;
-    color: var(--cinzaescuro);
-}
-
-p, span{
-    color: var(--cinzaescuro);
-}
-input[type=submit]{
-    background-color: var(--cinzaescuro);
-    position: relative;
-    top: 10px;
-    right: 20px;
-    float: right;
-    width: 200px;
-    color: white;
-    border: none;
-    border-radius: 25px;
-    height: 60px;
-    cursor: pointer;
-    transition: all .7s;
-}
-input[type=submit]:hover{
-    background-color: #444444;
+.logo{
+    display: inline-block;
 }
 
 
@@ -79,38 +21,72 @@ input[type=submit]:hover{
     height: 99.6%;
 }
 
-@media(max-width: 1315px){
-    #img{
-        display: none;
-    }
-    div.login{
-        border: none;
-    }
+main .login{
+    margin: auto;
+    width: 400px;
+    height: 500px;
+    background-color: rgba(255, 255, 255, 0.363);
+    border-radius: 20px;
+    padding: 25px;
+    border: 1px solid #8eccff;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.433);
 }
-@media(max-width: 905px){
-    div.texto h1, div.logo img{
-        text-align: center;
-        font-size: 3em;
-    }
 
-    .login label{
-        display: none;
-    }
-    input[type=text], input[type=password]{
-        width: 250px;
-    }
-    
-    .login{
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-        align-items: center;
-        justify-content: center;
-        margin: auto;
-    }
 
-    main p{
-        width: 100%;
-    }
+main .login h3{
+    text-align: center;
+    font-size: 2em;
 }
+
+main .login span{
+    font-size: 54px;
+    position: relative;
+    top: 25px;
+}
+
+main .login input[type = text],main .login input[type = password]{
+    margin-left: 5px;
+    width: 80%;
+    height: 54px;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    padding: 0 20px;
+}
+main .login input[type = password]{
+    margin-bottom: 50px;
+}
+
+
+.login input{
+    margin-top: 70px;
+}
+a{
+    float: right;
+    margin: 10px 0;
+    color: black;
+}
+#login{
+    text-align: center;
+    display: block;
+}
+main .login input[type = submit]{
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    width: 90%;
+    height: 50px;
+    border-radius: 20px;
+    border: none;
+    background-color: #9afdfb;
+    transition: ease-out .7s;
+    border: 1px solid #8eccff;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.433);
+    font-size: 1.3em;
+}
+.login input[type = submit]:hover{   
+    background-color: #8be9e8;
+}
+
+
     

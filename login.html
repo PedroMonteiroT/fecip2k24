@@ -12,21 +12,20 @@
 </head>
 <body>
     <main>
-        <div class="logo"><a href="index.html"><img src="img/cruz2.png" alt=""></a></div>
-        <div class="texto">
-            <h1>BIOLIFE <br> GERÊNCIAS</h1>
-            <p>Bem vindo ao <strong>BIOLIFE</strong>, por favor insira seu nome e senha para autentificação: </p>
-        </div>
         <div class="login">
-            <label for="usu"><span class="material-symbols-outlined">person</span></label>
-            <input type="text" name="iusu" id="usu" placeholder="Usuário" maxlength="16">
-            <br>
-            <label for="senha"><span class="material-symbols-outlined">lock</span></label>
-            <input type="password" name="isenha" id="senha" placeholder="Senha" maxlength="16" autocomplete="off">
-
-            <a href="gerecias.html"><input type="submit" value="LOGIN"></a>
+            <form action="gerecias.html">
+                <h3>Login</h3>
+                <label for="usu"><span class="material-symbols-outlined">person</span></label>
+                <input type="text" name="iusu" id="usu" placeholder="Usuário" minlength="6" maxlength="16">
+                <br>
+                <label for="senha"><span class="material-symbols-outlined">lock</span></label>
+                <input type="password" name="isenha" id="senha" placeholder="Senha"  minlength="8" maxlength="16" autocomplete="off">
+                <a href="">esqueci minha senha</a>
+                <input type="submit" value="login">
+                <a href="">Não tenho cadastro</a>
+            </form>
         </div>
     </main>
-    <div id="img"><img src="img/dna.png" alt=""></div>
+
 </body>
 </html>
