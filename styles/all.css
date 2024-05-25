@@ -12,6 +12,7 @@
     font-family: "Questrial"; 
     scrollbar-width: auto;
     scrollbar-color: var(--cianoclaro) var(--cianoescuro); 
+    scroll-behavior: smooth;
 }
 body{
     width: 100%;
@@ -26,9 +27,5 @@ div.logo img{
     width: 60px;
 }
 
-@media(max-width: 770px){
-    body{
-        height: 94vh;
-    }
-}
+
 

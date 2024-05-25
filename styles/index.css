@@ -7,7 +7,6 @@ body{
     background-image: url(../img/backgroundindex.jpeg);
     background-size: cover;
     background-repeat: no-repeat;
-    max-height: 100vh;
     height: 100%;
     display: flex;
     align-items: center;
@@ -55,6 +54,9 @@ main button{
     cursor: pointer;
     transition: all .7s;
 }
+button{
+    font-weight: 700;
+}
 button:hover{
     background-color: rgb(187, 187, 187);
 }
@@ -66,19 +68,10 @@ a{
     height: 50px;
     text-decoration: none;
 }
-@media(max-width: 1300px){
-    body{
-        background-size: auto;
 
-    }
-}
 @media(max-width: 770px){
-    main h1{
-        font-size: 3.5em;
-    }
-    body{
-        background-size: auto;
-
+    p{
+    font-size: 1.6em;
     }
 }
 

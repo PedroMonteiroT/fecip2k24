@@ -47,7 +47,7 @@ main{
     border-radius: 10px;
     font-weight: 900;
     font-size: 1.2em;
-    width: 80%;
+    width: 1200px;
     
 }
 input{
@@ -220,5 +220,10 @@ input[type = submit]{
 }
 input[type = submit]:hover{
     background-color: var(--cianoescuro);
+}
+@media(max-width: 1100px){
+    div{
+        grid-template-columns: 1fr;
+    }
 }
 
