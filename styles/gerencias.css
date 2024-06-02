@@ -1,17 +1,8 @@
 body {
     background-image: url(../img/gerenciasbg.png);
     background-size: cover;
-}
-
-header {
-    display: flex;
-}
-
-header h1 {
-    margin: 18px 0 0 18px;
-    color: var(--cinzaclaro);
-    font-weight: 400;
-    font-size: 2.2em;
+    overflow: hidden;
+    
 }
 
 main {
@@ -32,7 +23,7 @@ section {
     width: 100%;
 }
 
-section a.caixa {
+section a.caixa { 
     position: relative;
     background-color: white;
     width: 250px;
@@ -55,10 +46,7 @@ section a.caixa:hover {
     background-color: rgb(224, 224, 224);
 }
 
-section a.caixa:nth-child(3n+2) {
-    position: relative;
-    top: 40px;
-}
+
 
 section a.caixa span {
     color: var(--cianoescuro);
@@ -70,7 +58,7 @@ section a.caixa p {
     font-size: 1.2em;
 }
 section a.caixa .mais {
-    transition: all 0.3s;
+    transition: transform 0.25s;
     transform-origin: center;
 }
 
@@ -79,6 +67,10 @@ section a.caixa:hover .mais {
 }
 
 @media(max-width: 1534px){
+    body{
+        overflow-y: scroll;
+    }
+    
     section{
         grid-template-columns: repeat(2, 280px);
     }
@@ -87,6 +79,10 @@ section a.caixa:hover .mais {
     }
 }
 @media(max-width: 770px){
+    body{
+        overflow-y: scroll;
+    }
+    
     section{
         grid-template-columns: repeat(1, 280px);
     }

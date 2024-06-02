@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/gerencias.css">
     <link rel="stylesheet" href="styles/all.css">
+    <link rel="stylesheet" href="styles/gerencias.css">
+    <link rel="stylesheet" href="styles/menu.css">
     <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <title>BioLife</title>
@@ -12,7 +13,16 @@
 <body>
     <header>
         <div class="logo"><a href="index.html"><img src="img/cruz2.png" alt=""></a></div>
-        <h1>BIOLIFE GERÊNCIAS</h1>
+        <span id= "menu-burguer" class="material-symbols-outlined menu-mobile" onclick="apareceMenu()">menu</span>
+        <nav id="itens">
+                <ul>
+                    <li><a href="ficha.html">fichamento</a></li>
+                    <li><a href="estoquemedicamentos.html">estoque de medicamentos</a></li>
+                    <li><a href="faleconosco.html">fale conosco</a></li>
+                    <li><a href="#">logout</a></li>
+                </ul>
+            
+        </nav>
     </header>
     <main>
         <section>
@@ -33,7 +43,7 @@
             </a>
             <a href="#" class="caixa caixa4">
                 <span class="material-symbols-outlined">syringe</span>
-                <p>ACESSAR ESTOQUE DE MEDICAMENTOS</p>
+                <p>ACESSAR ESTOQUE DE EQUIPAMENTOS MÉDICOS</p>
                 <span class="mais">+</span>
             </a>
             <a href="medicos.html" class="caixa caixa5">
@@ -48,5 +58,6 @@
             </a>
         </section>
     </main>
+    <script src="mobile-navbar.js"></script>
 </body>
 </html>

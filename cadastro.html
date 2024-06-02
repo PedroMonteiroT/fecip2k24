@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/cadastro.css">
+    <link rel="stylesheet" href="styles/all.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+
+    <title>BioLife</title>
+</head>
+<body>
+    <main>
+        <div class="cadastro">
+            <form action="gerecias.html">
+                <h3>cadastro</h3>
+                <input type="text" name="iusu" id="usu" placeholder="Usuário" minlength="6" maxlength="16" required>
+                <br>
+                <input type="email" name="iemail" id="email" placeholder="E-mail" required>
+                <input type="password" name="isenha" id="senha" placeholder="Senha"  minlength="8" maxlength="16" autocomplete="off" required onchange="verificasenha()">
+                <input type="password" name="irepsenha" id="repsenha" placeholder="Confirmar Senha"  minlength="8" maxlength="16"  autocomplete="off" required onchange="verificasenha()">
+                <span id="nao"></span>
+               
+                
+                <input type="submit" value="cadastrar" id="enviar">
+                <a href="login.html">Já tenho cadastro</a>
+            </form>
+        </div>
+    </main>
+    <script>
+        function verificasenha(){
+        const senha = document.querySelector('input[name = isenha]')
+        const repsenha = document.querySelector('input[name = irepsenha]')
+        const nao = document.getElementById('nao')
+        const enviar = document.getElementById('enviar')
+       
+
+        if(repsenha.value != senha.value ){
+            nao.innerHTML = ""
+            texto.style.color = 'lawngreen'
+            
+        }else{
+            nao.innerHTML = "as senhas não conferem"
+            nao.style.fontWeight = 'bolder'
+            nao.style.color = 'red'
+        } 
+    
+    }
+    </script>
+</body>
+</html>
