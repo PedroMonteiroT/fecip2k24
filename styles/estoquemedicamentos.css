@@ -1,0 +1,121 @@
+body{
+    background-color: var(--cianoescuro);
+}
+
+header{
+    animation-name: sumir;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-delay: 6s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: both;
+    background-color: var(--cianoescuro);
+}
+header:hover{
+    animation-name: voltar;
+    animation-duration: .3s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: both;
+    background-color: var(--cianoescuro);
+}
+main{
+    width: 90%;
+    margin: auto;
+    padding: 25px;
+}
+h1{
+    text-align: center;
+    color: white;
+    font-size: 3em;
+}
+
+.pesquisa input{
+   width: 100%;
+   border-radius: 20px;
+   height: 50px;
+   background-color: var(--cinzaescuro); 
+   outline: none;
+   border: none;
+   color: white;
+   padding: 0 20px;
+   font-size: 1.3em;
+   margin: 40px 0;
+}
+.pesquisa input::placeholder{
+    color: white;
+}
+
+div.medicamento{
+    display: flex;
+    height: 150px;
+    width: 100%;
+    gap: 20px;
+}
+
+div.medicamento .caixas{
+    border: 3px solid var(--cinzaescuro);
+    border-radius: 10px;
+    width: 100%;
+    background-color: var(--cinzaclaro);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    padding: 10px 0;
+}
+div.equipamento .caixas:last-child::after{
+    content: '...';
+    rotate: 90deg;
+    color: white;
+    font-size: 5em;
+    position: relative;
+    left: 190px;
+    bottom: 90px;
+}
+hr{
+    margin: 30px -21px;
+    background-color: var(--cinzaescuro);
+    border: none;
+    height: 5px;
+}
+div.hr{
+    position: relative;
+}
+hr::after{
+    content: '|';
+    color: var(--cinzaescuro);
+    font-size: 30px;
+    position: absolute;
+    border-radius: 20px;
+    right: -23px;
+    bottom: -13px;
+    font-weight: bolder;
+}
+hr::before{
+    content: '|';
+    color: var(--cinzaescuro);
+    font-size: 30px;
+    position: absolute;
+    border-radius: 20px;
+    left: -23px;
+    bottom: -13px;
+    font-weight: bolder;
+}
+
+@keyframes sumir{
+    from{
+        opacity: 100%;
+    }
+    to{
+        opacity: 30%;
+    }
+}
+@keyframes voltar{
+    to{
+        opacity: 100%;
+    }
+}
