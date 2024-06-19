@@ -86,7 +86,7 @@ section a.caixa:hover .mais {
     section{
         grid-template-columns: repeat(1, 280px);
     }
-    section a.caixa:nth-child(2n +2) {
-     right: 20px;   
+    section .caixa{
+        margin-left: 20px;
     }
 }

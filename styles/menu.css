@@ -12,6 +12,9 @@ div.logo img{
     height: 80px;
     width: 80px;
 }
+nav{
+    transform: translateX(0%);
+}
 
 header nav ul{
     display: flex;
@@ -76,15 +79,18 @@ main{
     transition: all .7s;
     transform: translateX(100%);
 
-}
-nav ul{
-    flex-direction: column;
-    align-items: center;
-    margin-left: 0;
-    height: 80%;
-}
-nav ul li a{
-    color: white;
-}
+    }
+    nav ul{
+        flex-direction: column;
+        align-items: center;
+        margin-left: 0;
+        height: 80%;
+    }
+    header nav ul li a{
+        color: white;
+    }
+    header nav ul li:last-child a{
+        color: black;
+    }
 
-}
+    }
