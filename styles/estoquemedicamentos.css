@@ -1,38 +1,16 @@
 body{
     background-color: var(--cianoescuro);
 }
-
-header{
-    animation-name: sumir;
-    animation-duration: 3s;
-    animation-timing-function: linear;
-    animation-delay: 6s;
-    animation-iteration-count: 1;
-    animation-direction: normal;
-    animation-fill-mode: both;
-    background-color: var(--cianoescuro);
-}
-header:hover{
-    animation-name: voltar;
-    animation-duration: .3s;
-    animation-timing-function: linear;
-    animation-delay: 0s;
-    animation-iteration-count: 1;
-    animation-direction: normal;
-    animation-fill-mode: both;
-    background-color: var(--cianoescuro);
-}
 main{
     width: 90%;
     margin: auto;
-    padding: 25px;
+    padding: 30px 25px;
 }
 h1{
     text-align: center;
     color: white;
     font-size: 3em;
 }
-
 .pesquisa input{
    width: 100%;
    border-radius: 20px;
@@ -52,8 +30,10 @@ h1{
 div.medicamento{
     display: flex;
     height: 150px;
-    width: 100%;
+    width: 60%;
     gap: 20px;
+    flex-wrap: nowrap;
+    position: relative;
 }
 
 div.medicamento .caixas{
@@ -66,6 +46,8 @@ div.medicamento .caixas{
     align-items: center;
     gap: 40px;
     padding: 10px 0;
+    position: relative;
+    flex-wrap: wrap;
 }
 div.conteudo{
     display: flex;
@@ -74,18 +56,44 @@ div.conteudo .opcoes{
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 div.conteudo .opcoes span{
     font-size: 60px;
+    cursor: pointer;
+    transition: font-size .7s;
 }
+div.conteudo .opcoes span:hover{
+    font-size: 63px;
+}
+div.opcoesmesmo{
+    left: 90px;
+    position: absolute;
+    background-color: rgb(79, 79, 79);
+    border-radius: 15px;
+    width: 0;
+    height: 0;
+    color: white;
+    overflow: hidden;
+    transition: all .4s;
+}
+div.opcoesmesmo p{  
+    cursor: pointer;
+    text-align: center;
+    padding: 25px 0;
+    /* height: 100%; */
+    transition: background-color .3s;
+    box-sizing: 1px 1px 2px rgba(0, 0, 0, 0.388);
+}
+div.opcoesmesmo p:hover{
+    background-color: rgb(95, 95, 95);
+}
+
 hr{
     margin: 30px -21px;
     background-color: var(--cinzaescuro);
     border: none;
     height: 5px;
-}
-div.hr{
-    position: relative;
 }
 hr::after{
     content: '|';
@@ -93,8 +101,8 @@ hr::after{
     font-size: 30px;
     position: absolute;
     border-radius: 20px;
-    right: -23px;
-    bottom: -13px;
+    right: 0;
+    bottom: 42px;
     font-weight: bolder;
 }
 hr::before{
@@ -103,21 +111,54 @@ hr::before{
     font-size: 30px;
     position: absolute;
     border-radius: 20px;
-    left: -23px;
-    bottom: -13px;
+    left: 0;
+    bottom: 42px;
     font-weight: bolder;
 }
 
-@keyframes sumir{
-    from{
-        opacity: 100%;
+@media(max-width: 1200px){
+
+    div.medicamento .caixas:nth-child(1n){
+        border-left: 2px solid var(--cinzaescuro);
+        margin-left: 10px;
+        padding-left: 10px;
     }
-    to{
-        opacity: 30%;
+    div.medicamento .caixas:first-of-type{
+        border-left: none;
+    }
+    div.medicamento .caixas{
+        background-color: rgba(255, 255, 255, 0);
+        border: none;
+        border-radius: 0;
     }
 }
-@keyframes voltar{
-    to{
-        opacity: 100%;
+@media(max-width: 770px){
+    main{
+        width: 100%;
+        padding: 30px 10px;
+    }
+    h1{
+        font-size: 2em;
+    }
+    div.medicamento {
+        width: 100%;
+        font-size: 1.3em;
+        gap: 0;
+        flex-wrap: wrap;
+    }
+    div.medicamento .caixas img{
+        margin-top: 15px;
+        width: 80px;
+        height: 80px;
+    }
+    div.medicamento .caixas{
+        width: 100%;
+        
+    }
+    hr::after, hr::before{
+        content: '';
+    }
+    div.opcoesmesmo{
+        left: -200px;
     }
 }
