@@ -19,6 +19,7 @@ function apareceMenu(){
         itens.style.transform= "translateX(100%)"
     }
  }
+
 // window.addEventListener('resize', ajustarMenu);
 
 // // Garantir que o estado inicial esteja correto
