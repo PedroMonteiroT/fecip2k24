@@ -82,7 +82,7 @@ section a.caixa:hover .mais {
     body{
         overflow-y: scroll;
     }
-    
+
     section{
         grid-template-columns: repeat(1, 280px);
     }

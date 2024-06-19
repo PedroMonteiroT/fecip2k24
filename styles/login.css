@@ -6,6 +6,7 @@ body{
     background-image: linear-gradient(120deg, #85e1e0, #67e0de, #3ddbd8, #00e0dc);
     background-image: url(../img/fotocoracaomedico.jpg);
     background-size: cover;
+    overflow: hidden;
 }
 .logo{
     display: inline-block;
