@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/all.css">
-    <link rel="stylesheet" href="styles/estoqueequipamentos.css">
-    <link rel="stylesheet" href="styles/menu.css">
     <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="styles/menu.css">
+    <link rel="stylesheet" href="styles/all.css">
+    <link rel="stylesheet" href="styles/estoqueequipamentos.css">
     <title>BioLife</title>
 </head>
 <body>
@@ -16,7 +16,7 @@
         <span id= "menu-burguer" class="material-symbols-outlined menu-mobile" onclick="apareceMenu()">menu</span>
         <nav id="itens">
                 <ul>
-                    <li><a href="ficha.html">fichamento</a></li>
+                    <li><a href="gerecias.html">voltar</a></li>
                     <li><a href="estoquemedicamentos.html">estoque de medicamentos</a></li>
                     <li><a href="faleconosco.html">fale conosco</a></li>
                     <li><a href="#">logout</a></li>
@@ -29,24 +29,47 @@
         <div class="pesquisa">
             <input type="search" name="list" id="list" placeholder="Pesquisar equipamento:">
         </div>
-            <div class="equipamento">
-                <div class="caixas">
-                    <img src="img/cruz.png" alt="">
+            <div class="conteudo">
+                <div class="equipamento">
+                    <div class="caixas">
+                        <img src="img/cruz.png" alt="">
+                    </div>
+                    <div class="caixas">
+                        <h6>NOME</h6>
+                        <span>LUVA DO VASCO</span>
+                    </div>
+                    <div class="caixas">
+                        <h6>QUANTIDADE EM ESTOQUE</h6>
+                        <span>AMANHÃ</span>
+                    </div>
                 </div>
-                <div class="caixas">
-                    <h6>NOME</h6>
-                    <span>LUVA DO VASCO</span>
-                </div>
-                <div class="caixas">
-                    <h6>QUANTIDADE EM ESTOQUE</h6>
-                    <span>AMANHÃ</span>
+                <div class="opcoes" >
+                    <span class="material-symbols-outlined" onclick="mostraropcoes()">more_vert</span>
+                    <div class="opcoesmesmo" id="opcoesmesmo">
+                        <p>Atualizar dados do equipamento</p>
+                        <p>Adcionar unidade ao estoque</p>
+                        <p>Remover</p>
+                    </div>
                 </div>
             </div>
             <div class="hr">
                 <hr>
             </div>
     </main>
-
     <script src="mobile-navbar.js"></script>
+    <script>
+        var opcoesmesmo = document.getElementById("opcoesmesmo")
+        function mostraropcoes(){
+
+            if (opcoesmesmo.style.width == "0px" && opcoesmesmo.style.height == "0px"){
+                opcoesmesmo.style.width = "200px"
+                opcoesmesmo.style.height = "230px"
+            }
+            else{
+                opcoesmesmo.style.width = "0"
+                opcoesmesmo.style.height = "0"
+            }
+        }
+    </script>
 </body>
 </html>

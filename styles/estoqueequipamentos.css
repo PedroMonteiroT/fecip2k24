@@ -4,7 +4,7 @@ body{
 main{
     width: 90%;
     margin: auto;
-    padding: 25px;
+    padding: 30px 25px;
 }
 h1{
     text-align: center;
@@ -33,6 +33,7 @@ div.equipamento{
     width: 60%;
     gap: 20px;
     flex-wrap: nowrap;
+    position: relative;
 }
 
 div.equipamento .caixas{
@@ -46,16 +47,48 @@ div.equipamento .caixas{
     gap: 40px;
     padding: 10px 0;
     position: relative;
+    flex-wrap: wrap;
 }
-div.equipamento .caixas:last-child::after{
-    content: '...';
-    rotate: 90deg;
-    color: white;
-    font-size: 5em;
+div.conteudo{
+    display: flex;
+}
+div.conteudo .opcoes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
-    left: 190px;
-    bottom: 90px;
 }
+div.conteudo .opcoes span{
+    font-size: 60px;
+    cursor: pointer;
+    transition: font-size .7s;
+}
+div.conteudo .opcoes span:hover{
+    font-size: 63px;
+}
+div.opcoesmesmo{
+    left: 90px;
+    position: absolute;
+    background-color: rgb(79, 79, 79);
+    border-radius: 15px;
+    width: 0;
+    height: 0;
+    color: white;
+    overflow: hidden;
+    transition: all .4s;
+}
+div.opcoesmesmo p{  
+    cursor: pointer;
+    text-align: center;
+    padding: 25px 0;
+    /* height: 100%; */
+    transition: background-color .3s;
+    box-sizing: 1px 1px 2px rgba(0, 0, 0, 0.388);
+}
+div.opcoesmesmo p:hover{
+    background-color: rgb(95, 95, 95);
+}
+
 hr{
     margin: 30px -21px;
     background-color: var(--cinzaescuro);
@@ -81,4 +114,30 @@ hr::before{
     left: 0;
     bottom: 42px;
     font-weight: bolder;
+}
+
+@media(max-width: 1200px){
+
+    div.equipamento {
+        width: 100%;
+        font-size: 1.3em;
+    }
+    div.equipamento .caixas{
+        background-color: rgba(255, 255, 255, 0);
+        border: none;
+        border-radius: 0;
+    }
+    div.equipamento .caixas:nth-child(1n){
+        border-left: 2px solid var(--cinzaescuro);
+        padding-left: 10px;
+    }
+    div.equipamento .caixas:first-of-type{
+        border-left: none
+    }
+}
+@media(max-width: 770px){
+    header{
+        padding: 0 15px;
+        justify-content: space-between;
+    }
 }

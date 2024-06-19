@@ -67,14 +67,16 @@ div.medicamento .caixas{
     gap: 40px;
     padding: 10px 0;
 }
-div.equipamento .caixas:last-child::after{
-    content: '...';
-    rotate: 90deg;
-    color: white;
-    font-size: 5em;
-    position: relative;
-    left: 190px;
-    bottom: 90px;
+div.conteudo{
+    display: flex;
+}
+div.conteudo .opcoes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+div.conteudo .opcoes span{
+    font-size: 60px;
 }
 hr{
     margin: 30px -21px;
