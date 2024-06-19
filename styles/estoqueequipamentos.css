@@ -120,6 +120,7 @@ hr::before{
 
     div.equipamento .caixas:nth-child(1n){
         border-left: 2px solid var(--cinzaescuro);
+        margin-left: 10px;
         padding-left: 10px;
     }
     div.equipamento .caixas:first-of-type{
@@ -132,10 +133,6 @@ hr::before{
     }
 }
 @media(max-width: 770px){
-    header{
-        padding: 0 15px;
-        justify-content: space-between;
-    }
     main{
         width: 100%;
         padding: 30px 10px;
@@ -149,14 +146,18 @@ hr::before{
         gap: 0;
     }
     div.equipamento .caixas img{
+        margin-top: 15px;
         width: 80px;
         height: 80px;
     }
     div.equipamento .caixas{
-        width: 80px;
+        width: 100%;
         
     }
     hr::after, hr::before{
         content: '';
+    }
+    div.opcoesmesmo{
+        left: -200px;
     }
 }
