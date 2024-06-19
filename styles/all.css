@@ -26,6 +26,11 @@ div.logo img{
     height: 60px;
     width: 60px;
 }
+@media(max-width: 770px){
+    body{
+        width: 96%
+    }
+}
 
 
 
