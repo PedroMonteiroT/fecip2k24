@@ -113,27 +113,53 @@ section{
     margin-bottom: 30px;
 }
 
-section p::before{
-    content: '';
-    display: inline-block;
-    width: 30px;
-    height: 30px;
-    margin-right: 15px; 
-    vertical-align: middle;
-    border-radius: 5px;
+div.niveis{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.niveis input[type="radio"] {
+        display: none; /* Esconde o radiobutton padrão */
+        position: relative;
+    }
+
+/* Estilo para o radiobutton personalizado */
+.niveis input[type="radio"] + label {
+    position: relative;
+    padding-left: 35px; /* Espaço para o quadrado */
+    cursor: pointer;
 }
 
-section p:nth-child(1)::before{
-    background-color: red;
+/* Estilo para o quadrado externo */
+.niveis input[type="radio"] + label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    width: 25px; /* Largura do quadrado */
+    height: 25px; /* Altura do quadrado */
+    border: 2px solid #333; /* Cor e espessura da borda */
+    background-color: #fff; /* Cor de fundo */
+    border-radius: 4px; /* Borda arredondada */
 }
-section p:nth-child(2)::before{
-    background-color: yellow;
+
+
+
+/* Estilo específico para cada radiobutton */
+.niveis #emerg:checked + label:before {
+    background-color: red; /* Cor de fundo vermelha para Emergência */
 }
-section p:nth-child(3)::before{
-    background-color: green;
+
+.niveis #urgen:checked + label:before {
+    background-color: yellow; /* Cor de fundo amarela para Urgente */
 }
-section p:nth-child(4)::before{
-    background-color: blue;
+
+.niveis #pouco:checked + label:before {
+    background-color: green; /* Cor de fundo verde para Pouco urgente */
+}
+
+.niveis #nao:checked + label:before {
+    background-color: blue; /* Cor de fundo azul para Não urgente */
 }
 
 

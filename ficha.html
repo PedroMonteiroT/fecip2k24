@@ -54,16 +54,16 @@
 
             <h4>CLASSIFICAÇÃO DE RISCO</h4>
             <section>   
-                    <p>EMERGÊNCIA</p>
-                    <p>URGÊNCIA</p>
-                    <p>POUCO URGENTE</p>
-                    <p>NÃO URGENTE</p>
+                    <div class="niveis"><input type="radio" name="emer" id="emerg"><label  for="emerg">EMERGÊNCIA</label></div>
+                    <div class="niveis"><input type="radio" name="emer" id="urgen"><label for="urgen">URGÊNCIA</label></div>
+                    <div class="niveis"><input type="radio" name="emer" id="pouco"><label for="pouco">POUCO URGENTE</label></div>
+                    <div class="niveis"><input type="radio" name="emer" id="nao"><label for="nao">NÃO URGENTE</label></div>
                 
             </section>
             <h4>OBSERVAÇÕES SOBRE O PACIENTE</h4>
             <article>
                 <aside>
-                    <input type="checkbox" name="alergia" id="alergia">
+                    <input type="checkbox" name="alergia" id="alergzia" onclick="sumir()"]>
                     <label for="alergia">PACIENTE POSSUI ALERGIAS</label>
                     <textarea name="alergias" id="alergias" placeholder="SUBSTÂNCIA(S) CUJO O PACIENTE POSSUI ALERGIA"></textarea>
                 </aside>
@@ -114,5 +114,6 @@
             <input type="submit" value="FINALIZAR FICHA">
         </form>
     </main>
+    <script src="index.js"></script>
 </body>
 </html>
