@@ -20,13 +20,6 @@ body{
     height: 100vh;
 }
 
-div.logo img{
-    position: relative;
-    top: 5px;
-    left: 5px;
-    height: 60px;
-    width: 60px;
-}
 @media(max-width: 770px){
     body{
         width: 96%

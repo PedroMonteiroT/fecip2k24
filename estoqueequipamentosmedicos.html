@@ -13,15 +13,14 @@
 <body>
     <header>
         <div class="logo"><a href="index.html"><img src="img/cruz2.png" alt=""></a></div>
-        <span id= "menu-burguer" class="material-symbols-outlined menu-mobile" onclick="apareceMenu()">menu</span>
+        <span id="menu-burguer" class="material-symbols-outlined menu-mobile" onclick="apareceMenu()">menu</span>
         <nav id="itens">
-                <ul>
-                    <li><a href="gerecias.html">voltar</a></li>
-                    <li><a href="estoquemedicamentos.html">estoque de medicamentos</a></li>
-                    <li><a href="faleconosco.html">fale conosco</a></li>
-                    <li><a href="#">logout</a></li>
-                </ul>
-            
+            <ul>
+                <li><a href="gerecias.html">voltar</a></li>
+                <li><a href="estoquemedicamentos.html">estoque de medicamentos</a></li>
+                <li><a href="faleconosco.html">fale conosco</a></li>
+                <li><a href="#">logout</a></li>
+            </ul>
         </nav>
     </header>
     <main>
@@ -29,47 +28,112 @@
         <div class="pesquisa">
             <input type="search" name="list" id="list" placeholder="Pesquisar equipamento:">
         </div>
-            <div class="conteudo">
-                <div class="equipamento">
-                    <div class="caixas">
-                        <img src="img/cruz.png" alt="">
-                    </div>
-                    <div class="caixas">
-                        <h6>NOME</h6>
-                        <span>LUVA DO VASCO</span>
-                    </div>
-                    <div class="caixas">
-                        <h6>QUANTIDADE EM ESTOQUE</h6>
-                        <span>AMANHÃ</span>
-                    </div>
+        <div class="conteudo">
+            <div class="equipamento">
+                <div class="caixas">
+                    <img src="img/cruz.png" alt="">
                 </div>
-                <div class="opcoes" >
-                    <span class="material-symbols-outlined" onclick="mostraropcoes()">more_vert</span>
-                    <div class="opcoesmesmo" id="opcoesmesmo">
-                        <p>Atualizar dados do equipamento</p>
-                        <p>Adcionar unidade ao estoque</p>
-                        <p>Remover</p>
-                    </div>
+                <div class="caixas">
+                    <h6>NOME</h6>
+                    <span>LUVA DO VASCO</span>
+                </div>
+                <div class="caixas">
+                    <h6>QUANTIDADE EM ESTOQUE</h6>
+                    <span>AMANHÃ</span>
                 </div>
             </div>
-            <div class="hr">
-                <hr>
+            <div class="opcoes">
+                <span class="material-symbols-outlined" onclick="mostraropcoes(this)">more_vert</span>
+                <div class="opcoesmesmo">
+                    <p>Atualizar dados do equipamento</p>
+                    <p>Adcionar unidade ao estoque</p>
+                    <p>Remover</p>
+                </div>
             </div>
+        </div>
+        <div class="hr">
+            <hr>
+        </div>
+        <div class="conteudo">
+            <div class="equipamento">
+                <div class="caixas">
+                    <img src="img/cruz.png" alt="">
+                </div>
+                <div class="caixas">
+                    <h6>NOME</h6>
+                    <span>LUVA DO VASCO</span>
+                </div>
+                <div class="caixas">
+                    <h6>QUANTIDADE EM ESTOQUE</h6>
+                    <span>AMANHÃ</span>
+                </div>
+            </div>
+            <div class="opcoes">
+                <span class="material-symbols-outlined" onclick="mostraropcoes(this)">more_vert</span>
+                <div class="opcoesmesmo">
+                    <p>Atualizar dados do equipamento</p>
+                    <p>Adcionar unidade ao estoque</p>
+                    <p>Remover</p>
+                </div>
+            </div>
+        </div>
+        <div class="hr">
+            <hr>
+        </div>
+        <div class="conteudo">
+            <div class="equipamento">
+                <div class="caixas">
+                    <img src="img/cruz.png" alt="">
+                </div>
+                <div class="caixas">
+                    <h6>NOME</h6>
+                    <span>LUVA DO VASCO</span>
+                </div>
+                <div class="caixas">
+                    <h6>QUANTIDADE EM ESTOQUE</h6>
+                    <span>AMANHÃ</span>
+                </div>
+            </div>
+            <div class="opcoes">
+                <span class="material-symbols-outlined" onclick="mostraropcoes(this)">more_vert</span>
+                <div class="opcoesmesmo">
+                    <p>Atualizar dados do equipamento</p>
+                    <p>Adcionar unidade ao estoque</p>
+                    <p>Remover</p>
+                </div>
+            </div>
+        </div>
+        <div class="hr">
+            <hr>
+        </div>
+        <div class="conteudo">
+            <div class="equipamento">
+                <div class="caixas">
+                    <img src="img/cruz.png" alt="">
+                </div>
+                <div class="caixas">
+                    <h6>NOME</h6>
+                    <span>LUVA DO VASCO</span>
+                </div>
+                <div class="caixas">
+                    <h6>QUANTIDADE EM ESTOQUE</h6>
+                    <span>AMANHÃ</span>
+                </div>
+            </div>
+            <div class="opcoes">
+                <span class="material-symbols-outlined" onclick="mostraropcoes(this)">more_vert</span>
+                <div class="opcoesmesmo">
+                    <p>Atualizar dados do equipamento</p>
+                    <p>Adcionar unidade ao estoque</p>
+                    <p>Remover</p>
+                </div>
+            </div>
+        </div>
+        <div class="hr">
+            <hr>
+        </div>
     </main>
     <script src="mobile-navbar.js"></script>
-    <script>
-        var opcoesmesmo = document.getElementById("opcoesmesmo")
-        function mostraropcoes(){
-
-            if (opcoesmesmo.style.width == "0px" && opcoesmesmo.style.height == "0px"){
-                opcoesmesmo.style.width = "200px"
-                opcoesmesmo.style.height = "230px"
-            }
-            else{
-                opcoesmesmo.style.width = "0"
-                opcoesmesmo.style.height = "0"
-            }
-        }
-    </script>
+    <script src="opcoesdeadm.js"></script>
 </body>
 </html>
