@@ -60,6 +60,7 @@ div.medicamento .caixas {
 
 div.conteudo {
     display: flex;
+    margin-bottom: 20px;
 }
 
 div.conteudo .opcoes {
@@ -75,28 +76,62 @@ div.conteudo .opcoes span {
     transition: font-size .7s;
 }
 
-div.opcoesmesmo {
+/* div.opcoesmesmo {
+    
     left: -200px;
     position: absolute;
     background-color: rgb(79, 79, 79);
     border-radius: 15px;
     width: 0;
-    height: 0;
+    padding: -20px;
     color: white;
     overflow: hidden;
     z-index: 1;
     transition: all .4s;
 }
 
-div.opcoesmesmo p {
+div.opcoesmesmo a {
+    color: white;
+    text-decoration: none;
+    display: block;
     cursor: pointer;
     text-align: center;
-    padding: 25px 0;
+    padding: 30px 0;
     transition: background-color .3s;
     box-sizing: 1px 1px 2px rgba(0, 0, 0, 0.388);
 }
 
-div.opcoesmesmo p:hover {
+div.opcoesmesmo a:hover {
+    background-color: rgb(95, 95, 95);
+} */
+ div.opcoesmesmo {
+    position: absolute;
+    background-color: rgb(79, 79, 79);
+    border-radius: 20px;
+    width: 200px; /* Largura desejada quando visível */
+    height: 230px; /* Altura desejada quando visível */
+    color: white;
+    overflow: hidden;
+    z-index: 1;
+    transform-origin: right; /* Expande da direita para a esquerda */
+    transform: scale(0); /* Inicialmente não visível */
+    transition: transform .4s, width .4s, height .4s;
+    right: 50px; /* Posiciona a div à direita */
+    top: -30px; /* Ajuste o top conforme necessário */
+}
+
+div.opcoesmesmo a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    cursor: pointer;
+    text-align: center;
+    padding: 30px 0;
+    transition: background-color .3s;
+    box-sizing: border-box; /* Corrige o box-sizing para o padding */
+}
+
+div.opcoesmesmo a:hover {
     background-color: rgb(95, 95, 95);
 }
 div.hr{
